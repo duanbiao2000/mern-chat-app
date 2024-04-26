@@ -30,6 +30,8 @@ const userSchema = new mongoose.Schema(
 	{ timestamps: true }
 );
 
+// 定义一个名为User的模型，用于与数据库中的User集合交互
+// 该模型基于之前定义的userSchema，该架构描述了数据库中用户文档的结构
 const User = mongoose.model("User", userSchema);
 
 export default User;

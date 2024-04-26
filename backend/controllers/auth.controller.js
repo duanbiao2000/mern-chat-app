@@ -1,4 +1,10 @@
-import bcrypt from "bcryptjs";
+/**
+ * Handles user signup by validating user data, hashing password, and creating a new user.
+ *
+ * @param {Object} req - Express request object containing user data in the request body.
+ * @param {Object} res - Express response object used to send responses back to the client.
+ * @return {Promise} A promise that resolves with a JSON response containing the new user's data or an error message.
+ */import bcrypt from "bcryptjs";
 import User from "../models/user.model.js";
 import generateTokenAndSetCookie from "../utils/generateToken.js";
 
@@ -79,8 +85,11 @@ export const login = async (req, res) => {
 
 export const logout = (req, res) => {
 	try {
-		res.cookie("jwt", "", { maxAge: 0 });
-		res.status(200).json({ message: "Logged out successfully" });
+		// 清除jwt cookie，实现用户登出功能
+res.cookie("jwt", "", { maxAge: 0 });
+
+// 返回成功登出的消息
+res.status(200).json({ message: "Logged out successfully" });
 	} catch (error) {
 		console.log("Error in logout controller", error.message);
 		res.status(500).json({ error: "Internal Server Error" });
