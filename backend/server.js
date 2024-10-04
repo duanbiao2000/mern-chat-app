@@ -1,15 +1,25 @@
+// 导入path模块
 import path from "path";
+// 导入express模块
 import express from "express";
+// 导入dotenv模块
 import dotenv from "dotenv";
+// 导入cookie-parser模块
 import cookieParser from "cookie-parser";
 
+// 导入authRoutes模块
 import authRoutes from "./routes/auth.routes.js";
+// 导入messageRoutes模块
 import messageRoutes from "./routes/message.routes.js";
+// 导入userRoutes模块
 import userRoutes from "./routes/user.routes.js";
 
+// 导入connectToMongoDB模块
 import connectToMongoDB from "./db/connectToMongoDB.js";
+// 导入socket模块
 import { app, server } from "./socket/socket.js";
 
+// 配置dotenv
 dotenv.config();
 
 const __dirname = path.resolve();

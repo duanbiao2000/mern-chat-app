@@ -1,9 +1,13 @@
 const GenderCheckbox = ({ onCheckboxChange, selectedGender }) => {
 	return (
 		<div className='flex'>
+			{/* 性别选择框 */}
 			<div className='form-control'>
+				{/* 性别标签 */}
 				<label className={`label gap-2 cursor-pointer ${selectedGender === "male" ? "selected" : ""} `}>
+					{/* 性别文本 */}
 					<span className='label-text'>Male</span>
+					{/* 性别选择框 */}
 					<input
 						type='checkbox'
 						className='checkbox border-slate-900'

@@ -1,6 +1,9 @@
 import Conversations from "./Conversations";
+// 导入Conversations组件
 import LogoutButton from "./LogoutButton";
+// 导入LogoutButton组件
 import SearchInput from "./SearchInput";
+// 导入SearchInput组件
 
 const Sidebar = () => {
 	return (

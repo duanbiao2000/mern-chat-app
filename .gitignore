@@ -1,4 +1,5 @@
 # Logs
+# 忽略日志文件，包括应用程序日志、npm、yarn、pnpm 和 lerna 的调试日志
 logs
 *.log
 npm-debug.log*
@@ -7,14 +8,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# 忽略编译后的模块和 SSR 分发目录，以及本地配置文件
 node_modules
 dist
 dist-ssr
 *.local
 
+# 忽略环境变量文件
 .env
 
 # Editor directories and files
+# 忽略大多数编辑器和IDE生成的文件和目录，但保留 extensions.json 文件
 .vscode/*
 !.vscode/extensions.json
 .idea
